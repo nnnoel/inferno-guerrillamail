@@ -1,0 +1,32 @@
+{
+  "name": "inferno-guerrillamail",
+  "description": "Description",
+  "author": "Noel Colon",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "prod": "brunch build --production"
+  },
+  "dependencies": {
+    "inferno": "^3.7.0",
+    "inferno-component": "^3.7.0"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2.7.1",
+    "babel-brunch": "^6.1.1",
+    "babel-plugin-inferno": "^3.2.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-preset-env": "^1.5.2",
+    "brunch": "^2.10.9",
+    "clean-css-brunch": "^2.10.0",
+    "css-brunch": "^2.10.0",
+    "inferno-test-utils": "^3.7.1",
+    "javascript-brunch": "^2.10.0",
+    "typescript-brunch": "^2.3.0",
+    "uglify-js-brunch": "^2.10.0"
+  }
+}
