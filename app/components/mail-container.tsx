@@ -14,6 +14,7 @@ class MailContainer extends Component<any, MailContainerState> {
   constructor(props) {
     super(props);
     this.state = {
+      apiIsDown: false,
       emailAddress: '',
       emailAlias: '',
       emailList: [],
@@ -33,6 +34,11 @@ class MailContainer extends Component<any, MailContainerState> {
       this.setState({ emailAddress: email_addr, emailAlias: alias }, () => {
         this.getEmailList(sid_token);
       });
+    })
+    .catch(err => {
+      if(err.message === 'Failed to fetch') {
+        this.setState({ apiIsDown: true });
+      }
     });
   }
 
@@ -153,6 +159,10 @@ class MailContainer extends Component<any, MailContainerState> {
             <TempAddresses isLoading="true"/>
           </div>
         ); 
+      }
+
+      if(this.state.apiIsDown) {
+        return <div>The Guerrilla API is <a href='https://api.guerrillamail.com/'>down</a> right now..</div>
       }
 
       let viewNode = this.getViewNode(this.state);
