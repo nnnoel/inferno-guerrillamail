@@ -26,7 +26,7 @@
     "css-brunch": "^2.10.0",
     "inferno-test-utils": "^3.7.1",
     "javascript-brunch": "^2.10.0",
-    "typescript-brunch": "^2.3.0",
+    "typescript-brunch": "brunch/typescript-brunch",
     "uglify-js-brunch": "^2.10.0"
   }
 }
